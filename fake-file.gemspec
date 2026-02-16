@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "gem used different libraries to create fake file as fast as these libraries work"
   spec.homepage = "https://github.com/VasylenchukMischa/fake-file"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.3.0"
 
   spec.metadata["homepage_uri"] = 'https://github.com/VasylenchukMischa/fake-file'
 

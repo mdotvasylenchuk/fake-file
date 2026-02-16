@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "caxlsx"
   spec.add_dependency "faker"
   spec.add_dependency "matrix"
+  spec.add_dependency "rack-test"
 
   spec.add_development_dependency "pry"
   spec.add_development_dependency "marcel"

@@ -64,6 +64,16 @@ FakeFile.generate(:docx)
 FakeFile.generate(:xlsx)
 ```
 
+### Rack::Test uploaded file helper
+
+```ruby
+FakeFile.upload(:pdf)
+FakeFile.upload(:docx)
+FakeFile.upload(:xlsx)
+```
+
+Returns `Rack::Test::UploadedFile`, so you can use it directly in request specs.
+
 ## Usage in tests
 
 ### ActiveStorage example
@@ -89,6 +99,12 @@ require "marcel"
 
 expect(Marcel::MimeType.for(FakeFile.docx))
     .to eq("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+```
+
+### Request spec with Rack::Test
+
+```ruby
+post "/imports", params: { file: FakeFile.upload(:xlsx) }
 ```
 
 ## Adding a new format

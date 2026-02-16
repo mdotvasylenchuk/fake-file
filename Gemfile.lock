@@ -7,6 +7,7 @@ PATH
       faker
       matrix
       prawn-html
+      rack-test
 
 GEM
   remote: https://rubygems.org/
@@ -49,6 +50,9 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     racc (1.8.1)
+    rack (3.2.0)
+    rack-test (2.2.0)
+      rack (>= 1.3)
     rake (13.0.6)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)

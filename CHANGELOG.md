@@ -10,7 +10,7 @@
 
 - Replaced `htmltoword` with `docxify` for DOCX generation
 - Replaced `axlsx` with `caxlsx` for modern Ruby compatibility
-- Kept backward compatibility with `FakeFile::Document.*` methods
+- Dropped legacy `FakeFile::Document.*` API support
 - Updated specs to cover facade API and unsupported format behavior
 
 ## [0.1.0] - 2022-06-29

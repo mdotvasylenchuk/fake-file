@@ -21,8 +21,4 @@ RSpec.describe FakeFile do
     expect { FakeFile.generate(:doc) }
       .to raise_error(FakeFile::Registry::UnsupportedFormatError, "Unsupported format: :doc")
   end
-
-  it "keeps backward compatibility for document class" do
-    expect(Marcel::MimeType.for(FakeFile::Document.pdf)).to eq("application/pdf")
-  end
 end

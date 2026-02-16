@@ -64,16 +64,6 @@ FakeFile.generate(:docx)
 FakeFile.generate(:xlsx)
 ```
 
-### Backward compatibility
-
-Legacy API is still available:
-
-```ruby
-FakeFile::Document.pdf
-FakeFile::Document.docx
-FakeFile::Document.xlsx
-```
-
 ## Usage in tests
 
 ### ActiveStorage example

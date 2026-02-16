@@ -25,22 +25,6 @@ module FakeFile
     end
   end
 
-  class Document
-    class << self
-      def pdf(options = {})
-        FakeFile.pdf(options)
-      end
-
-      def docx(options = {})
-        FakeFile.docx(options)
-      end
-
-      def xlsx(options = {})
-        FakeFile.xlsx(options)
-      end
-    end
-  end
-
   Registry.register(:pdf, Generators::PdfGenerator.new)
   Registry.register(:docx, Generators::DocxGenerator.new)
   Registry.register(:xlsx, Generators::XlsxGenerator.new)

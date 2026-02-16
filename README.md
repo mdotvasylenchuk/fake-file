@@ -91,22 +91,6 @@ expect(Marcel::MimeType.for(FakeFile.docx))
     .to eq("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 ```
 
-## Architecture
-
-The gem is built with an extensible architecture:
-
-- **Strategy**: each format has its own generator class
-- **Registry/Factory**: central format-to-generator mapping
-- **Base Generator**: shared tempfile-building logic
-
-Current internal structure:
-
-- `FakeFile::Registry`
-- `FakeFile::Generators::BaseGenerator`
-- `FakeFile::Generators::PdfGenerator`
-- `FakeFile::Generators::DocxGenerator` (uses [`docxify`](https://github.com/foundercatalyst/docxify))
-- `FakeFile::Generators::XlsxGenerator`
-
 ## Adding a new format
 
 1. Create a new generator class in `lib/fake-file/generators/`.

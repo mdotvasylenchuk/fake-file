@@ -4,12 +4,6 @@ module FakeFile
   class Registry
     class UnsupportedFormatError < StandardError; end
 
-    ALIASES = {
-      doc: :docx,
-      xls: :xlsx,
-      xsl: :xlsx
-    }.freeze
-
     class << self
       def register(format, generator)
         generators[normalize(format)] = generator
@@ -24,8 +18,7 @@ module FakeFile
       private
 
       def normalize(format)
-        normalized = format.to_s.downcase.to_sym
-        ALIASES.fetch(normalized, normalized)
+        format.to_s.downcase.to_sym
       end
 
       def generators

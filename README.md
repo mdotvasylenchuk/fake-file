@@ -11,8 +11,8 @@ It helps when you need to attach a file to a model (ActiveStorage, Shrine, Carri
 Currently supported formats:
 
 - `pdf`
-- `docx` (`doc` alias)
-- `xlsx` (`xls` and `xsl` aliases)
+- `docx`
+- `xlsx`
 
 ## Installation
 
@@ -62,14 +62,6 @@ FakeFile.xlsx(options = {})
 FakeFile.generate(:pdf)
 FakeFile.generate(:docx)
 FakeFile.generate(:xlsx)
-```
-
-Aliases:
-
-```ruby
-FakeFile.generate(:doc)  # => docx
-FakeFile.generate(:xls)  # => xlsx
-FakeFile.generate(:xsl)  # => xlsx
 ```
 
 ### Backward compatibility

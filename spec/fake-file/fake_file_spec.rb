@@ -17,12 +17,9 @@ RSpec.describe FakeFile do
     expect(Marcel::MimeType.for(FakeFile.xlsx)).to eq("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
   end
 
-  it "supports format aliases through registry" do
-    docx_file = FakeFile.generate(:doc)
-    xlsx_file = FakeFile.generate(:xls)
-
-    expect(Marcel::MimeType.for(docx_file)).to eq("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    expect(Marcel::MimeType.for(xlsx_file)).to eq("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+  it "raises for unsupported format" do
+    expect { FakeFile.generate(:doc) }
+      .to raise_error(FakeFile::Registry::UnsupportedFormatError, "Unsupported format: :doc")
   end
 
   it "keeps backward compatibility for document class" do

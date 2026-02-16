@@ -1,5 +1,19 @@
 ## [Unreleased]
 
+### Added
+
+- Extensible generator architecture (`Strategy + Registry`) with dedicated generators for `pdf`, `docx`, and `xlsx`
+- Shared `BaseGenerator` for reusable tempfile creation logic
+- New facade API: `FakeFile.generate`, `FakeFile.pdf`, `FakeFile.docx`, `FakeFile.xlsx`
+- Format aliases in registry: `doc -> docx`, `xls/xsl -> xlsx`
+
+### Changed
+
+- Replaced `htmltoword` with `docxify` for DOCX generation
+- Replaced `axlsx` with `caxlsx` for modern Ruby compatibility
+- Kept backward compatibility with `FakeFile::Document.*` methods
+- Updated specs to cover facade API and alias behavior
+
 ## [0.1.0] - 2022-06-29
 
 - Initial release

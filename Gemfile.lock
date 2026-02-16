@@ -2,57 +2,38 @@ PATH
   remote: .
   specs:
     fake-file (0.0.2)
-      axlsx
-      htmltoword
+      caxlsx
+      docxify
+      faker
+      matrix
       prawn-html
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (7.0.3.1)
-      actionview (= 7.0.3.1)
-      activesupport (= 7.0.3.1)
-      rack (~> 2.0, >= 2.2.0)
-      rack-test (>= 0.6.3)
-      rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.2.0)
-    actionview (7.0.3.1)
-      activesupport (= 7.0.3.1)
-      builder (~> 3.1)
-      erubi (~> 1.4)
-      rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    activesupport (7.0.3.1)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 1.6, < 2)
-      minitest (>= 5.1)
-      tzinfo (~> 2.0)
     ansi (1.5.0)
     ast (2.4.2)
-    axlsx (1.3.6)
-      htmlentities (~> 4.3.1)
-      nokogiri (>= 1.4.1)
-      rubyzip (>= 0.9.5)
-    builder (3.2.4)
+    caxlsx (4.2.0)
+      htmlentities (~> 4.3, >= 4.3.4)
+      marcel (~> 1.0)
+      nokogiri (~> 1.10, >= 1.10.4)
+      rubyzip (>= 1.3.0, < 3)
     coderay (1.1.3)
-    concurrent-ruby (1.1.10)
-    crass (1.0.6)
+    concurrent-ruby (1.3.6)
     diff-lcs (1.5.0)
-    erubi (1.10.0)
-    htmlentities (4.3.4)
-    htmltoword (1.1.1)
-      actionpack
-      nokogiri
-      rubyzip (>= 1.0)
-    i18n (1.12.0)
+    docxify (0.1.7)
+      image_size (~> 3.0)
+      rubyzip (~> 2.3)
+    faker (3.6.0)
+      i18n (>= 1.8.11, < 2)
+    htmlentities (4.4.2)
+    i18n (1.14.8)
       concurrent-ruby (~> 1.0)
-    loofah (2.18.0)
-      crass (~> 1.0.2)
-      nokogiri (>= 1.5.9)
+    image_size (3.4.0)
     marcel (1.0.2)
+    matrix (0.4.3)
     method_source (1.0.0)
-    minitest (5.16.2)
-    nokogiri (1.13.8-x86_64-linux)
+    nokogiri (1.19.0-x86_64-linux-gnu)
       racc (~> 1.4)
     oga (3.3)
       ast
@@ -67,15 +48,7 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    racc (1.6.0)
-    rack (2.2.4)
-    rack-test (2.0.2)
-      rack (>= 1.3)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
-      nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.3)
-      loofah (~> 2.3)
+    racc (1.8.1)
     rake (13.0.6)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
@@ -95,8 +68,6 @@ GEM
       ast
     rubyzip (2.3.2)
     ttfunk (1.7.0)
-    tzinfo (2.0.5)
-      concurrent-ruby (~> 1.0)
 
 PLATFORMS
   x86_64-linux
@@ -109,4 +80,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   2.3.8
+  4.0.6

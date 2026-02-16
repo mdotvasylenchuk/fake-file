@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fake-file (0.1.2)
+    fake-file (0.1.4)
       caxlsx
       docxify
       faker
